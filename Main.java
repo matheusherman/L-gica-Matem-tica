@@ -13,7 +13,9 @@ public class Main {
         String v2 = keyboard.nextLine();
         System.out.printf("%10s", v1);
         System.out.printf("%10s", v2);
-        System.out.printf("%10s", v1 + " ^ " + v2);
+        System.out.printf("%10s", "¬" + v1);
+        System.out.printf("%10s", "¬" + v2);
+        System.out.printf("%15s", v1 + " ^ " + v2);
         System.out.printf("%10s", v1 + " v " + v2);
         System.out.printf("%10s", v1 + " -> " + v2);
         System.out.printf("%10s", v1 + " <-> " + v2);
@@ -39,6 +41,8 @@ public class Main {
             }
             System.out.printf("%10s ", t.var1);
             System.out.printf("%10s ", t.var2);
+            System.out.printf("%10s ", t.negation1());
+            System.out.printf("%10s ", t.negation2());
             System.out.printf("%10s", t.conjunction());
             System.out.printf("%10s", t.disjunct() );
             System.out.printf("%10s", t.implication());
