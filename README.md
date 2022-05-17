@@ -95,27 +95,28 @@ Tema Sistemas especialista peso
     
 ## Exemplo de execução
 
-        Altura em m: 1.7
-        Peso em kg: 68
-        Idade: 21
-        Percentual de Gordura: 8
-        Quando fecha o pulso com o dedo do meio e o dedão: 
-        1 - Dedo do meio fica por cima do dedão e vice-versa
-        2 - Dedo do meio e dedão se tocam na medida
-        3 - Os dedos não se encostam
-        Resposta: 1
-        Seu metabolismo é: 
-        1 - Muito acelerado
-        2 - Acelerado
-        3 - Lento
-        4 - Não sei
-        Resposta: 1
-        Em realção aos seus ombros
-        1 - São mais estreitos que meus quadris
-        2 - São mais largos que meus quadris
-        3 - São do mesmo tamanho que meus quadris
-        Resposta: 1
-        ==================== Resultado =====================
-        IMC Calculado: 23.53, a situação é considerada como: Peso saudável
-        Biotipo: Ectomorfo
-        Gordura: Atleta
+	Altura em m: 1.7
+	Peso em kg: 68
+	Idade: 21
+	Percentual de Gordura: 8
+	Quando fecha o pulso com o dedo do meio e o dedão:  
+	1 - Dedo do meio fica por cima do dedão e vice-versa
+	2 - Dedo do meio e dedão se tocam na medida
+	3 - Os dedos não se encostam
+	Resposta: 1
+	Seu metabolismo é: 
+	1 - Muito acelerado
+	2 - Acelerado      
+	3 - Lento
+	4 - Não sei        
+	Resposta: 1
+	Em realção aos seus ombros
+	1 - São mais estreitos que meus quadris
+	2 - São mais largos que meus quadris
+	3 - São do mesmo tamanho que meus quadris
+	Resposta: 1
+	==================== Resultado =====================
+	IMC Calculado: 23.53, a situação é considerada como: Peso saudável
+	Biotipo: Ectomorfo
+	Gordura: Atleta
+	Resultado: Melhor que a média
