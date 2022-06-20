@@ -25,7 +25,7 @@ public class main {
                     System.out.println();
                     String[] suspeitos = {"Sherlock", "Inspetor Lestrage", "Turista", "Arqui-inimigo do Sherlock", "Taxista", "John watson "};
                     String assassino = "taxista";
-                    String[] pistas = {
+                    String[] pistas = {"Ela estava se molhando e precisava sair da chuva ",
                             "As demais vítimas estavam atrasadas e precisavam no meio de transporte",
                             "Se rache = vingança em alemão, então o assassino estava se vingando",
                             "A mala da vítima estava no carro do assassino",
@@ -35,7 +35,7 @@ public class main {
                             "O assassino trabalha na em um cargo relacionado ao estado",
                             "O assassino rapitava as vitimas em areas movimentadas",
                             "O assassino conhece as ruas da cidade muito bem ",
-                            "O assassino mora na Baker Street"};
+                            "O assassino mora e passa a maior parte do tempo na Baker Street"};
 
                     String[] solucoes = {"O turista matou", "O inspetor Lestrage matou", "Sherlock matou para ser o único a conseguir 'deduzir' quem é o assassino",
                             "O taxista é o assassino", "O arqui-inimigo do sherlock é o assassino", "John watson assassinou assassinou as vitimas para ver como Shelock iria tentar resolver o caso"};
@@ -203,7 +203,7 @@ public class main {
 
                     String[] solucoes_c3 = {"Somente Moriarty está morto", "Somente Moriarty está vivo", "Moriarty e Ricoletti morream com o tiro", "Moriarty e Ricoletti nao morream com o tiro"};
                     chute = "";
-                    vida = 8;
+                    vida = 10;
                     j = 3;
 
                     Arrays.sort(pistas_c3);
@@ -221,10 +221,11 @@ public class main {
                             System.out.println("\n1 - Chutar\n2 - Pista\n3 - Dica\n4 - Ver possiveis soluções e Suspeitos\n0 - Sair\n");
                             System.out.println("Vidas: " + vida);
                             System.out.print("Entrada: ");
-                            int opcao2 = teclado.nextInt();
+                            int opcao3 = teclado.nextInt();
 
-                            if (opcao2 == 1) {
-                                System.out.print("Digite o nome do assassino:");
+                            if (opcao3 == 1) {
+                                teclado.nextLine();
+                                System.out.print("Moriaty e/ou Ricoletti estão morreram com o tiro? ");
                                 chute = teclado.next();
                                 int comparacao = chute.toLowerCase(Locale.ROOT).compareTo(resposta);
                                 if (comparacao == 0) {
@@ -234,7 +235,7 @@ public class main {
                                     System.out.println("RESPOSTA INCORRETA!");
                                     vida--;
                                 }
-                            } else if (opcao2 == 2) {
+                            } else if (opcao3 == 2) {
                                 if (j < pistas_c3.length) {
                                     for (i = 0; i <= j; i++) {
                                         System.out.printf("Pista %d - ", i + 1);
@@ -245,9 +246,9 @@ public class main {
                                 }
                                 j++;
                                 vida--;
-                            } else if (opcao2 == 3) {
+                            } else if (opcao3 == 3) {
                                 //ARRUMAR DICAS
-                            } else if (opcao2 == 4) {
+                            } else if (opcao3 == 4) {
                                 System.out.println("Possiveis soluções:\n");
                                 for (String k : solucoes_c3) {
                                     System.out.println(k);
@@ -258,12 +259,13 @@ public class main {
                                     System.out.print(k + ", ");
                                 }
                                 System.out.println();
-                            } else if (opcao2 == 0) {
+                            } else if (opcao3 == 0) {
                                 System.out.print("Obrigado por jogar!");
                                 exit = true;
                                 break;
-                            } else
+                            } else{
                                 System.out.println("Opcao inexistente!\n");
+                            }
                         }
                     }
                     break;
