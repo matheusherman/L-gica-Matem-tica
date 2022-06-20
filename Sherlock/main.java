@@ -16,7 +16,7 @@ public class main {
             System.out.println("| 2 - The great game                 |");
             System.out.println("| 3 - The Abominable Bride           |");
             System.out.println("| 0 - Sair                           |");
-            System.out.println("-------------------------------------");
+            System.out.println("|------------------------------------|");
             System.out.print("Selecione: ");
             int opcao = teclado.nextInt();
             switch (opcao) {
@@ -55,7 +55,7 @@ public class main {
                             System.out.println("Voltando ao menu principal!\n");
                             break;
                         } else {
-                            System.out.println("\n1 - Chutar\n2 - Pista\n3 - Dica\n4 - Ver possiveis soluções e Suspeitos\n0 - Sair\n");
+                            System.out.println("\n1 - Chutar\n2 - Pista\n3 - Ver possiveis soluções e Suspeitos\n0 - Sair\n");
                             System.out.println("Vidas: " + vida);
                             System.out.print("Entrada: ");
                             int opcao2 = teclado.nextInt();
@@ -83,8 +83,6 @@ public class main {
                                 j++;
                                 vida--;
                             } else if (opcao2 == 3) {
-                                //ARRUMAR DICAS
-                            } else if (opcao2 == 4) {
                                 System.out.println("Possiveis soluções:\n");
                                 for (String k : solucoes) {
                                     System.out.println(k);
@@ -107,7 +105,7 @@ public class main {
                 case 2:
                     System.out.println("THE GREAT GAME");
                     System.out.println();
-                    String[] suspeitos2 = {"Molly Hopper", "Moriarty", "Marry", "Mycroft"};
+                    String[] suspeitos2 = {"Molly Hopper", "Moriarty", "Marry", "Mycroft", "Sindry"};
                     String solucao = "moriarty";
                     String[] pistas_c2 = {
                             "As demais vítimas precisavam atrasadas e precisavam no meio de transporte",
@@ -134,7 +132,7 @@ public class main {
                             System.out.println("Voltando ao menu principal!\n");
                             break;
                         } else {
-                            System.out.println("\n1 - Chutar\n2 - Pista\n3 - Dica\n4 - Ver possiveis soluções e Suspeitos\n0 - Sair\n");
+                            System.out.println("\n1 - Chutar\n2 - Pista\n3 - Ver possiveis soluções e Suspeitos\n0 - Sair\n");
                             System.out.println("Vidas: " + vida);
                             System.out.print("Entrada: ");
                             int opcao2 = teclado.nextInt();
@@ -163,8 +161,6 @@ public class main {
                                 j++;
                                 vida--;
                             } else if (opcao2 == 3) {
-                                //ARRUMAR DICAS
-                            } else if (opcao2 == 4) {
                                 System.out.println("Possiveis soluções:\n");
                                 for (String k : solucoes2) {
                                     System.out.println(k);
@@ -189,7 +185,6 @@ public class main {
                     System.out.println("THE ABOMINABLE BRIDE");
                     System.out.println();
                     String[] resolucoes_c3 = {"Moriarty esta vivo", "Moriarty esta morto", "Ricoletti morreu com o tiro", "Ricoletti não morreu com o tiro"};
-                    String resposta = "Moriarty e Ricoletti morream com o tiro";
                     String[] pistas_c3 = {"Moriarty deu um tiro na boca",
                             "Ricoletti levou um tiro na nuca",
                             "O casos foram alucinações causadas pela cocaina",
@@ -201,9 +196,8 @@ public class main {
                             "O caso Ricoletti foi uma imaginação de Sherlock",
                             "O caso Moriarty e Ricoletti são muito semenhantes nos principais pontos"};
 
-                    String[] solucoes_c3 = {"Somente Moriarty está morto", "Somente Moriarty está vivo", "Moriarty e Ricoletti morream com o tiro", "Moriarty e Ricoletti nao morream com o tiro"};
-                    chute = "";
-                    vida = 10;
+                    String[] solucoes_c3 = {"Somente Moriarty está morto", "Somente Moriarty está vivo", "Moriarty e Ricoletti morreram com o tiro", "Moriarty e Ricoletti nao morreram com o tiro"};
+                    vida = 8;
                     j = 3;
 
                     Arrays.sort(pistas_c3);
@@ -212,23 +206,27 @@ public class main {
                         System.out.println(pistas_c3[i]);
                     }
 
-                    while (!chute.equals(resposta) || i <= pistas_c3.length) {
+                    while (i <= pistas_c3.length) {
                         if (vida == 0) {
                             System.out.println("\nVocê não tem mais vidas!");
                             System.out.println("Voltando ao menu principal!\n");
                             break;
                         } else {
-                            System.out.println("\n1 - Chutar\n2 - Pista\n3 - Dica\n4 - Ver possiveis soluções e Suspeitos\n0 - Sair\n");
+                            System.out.println("\n1 - Chutar\n2 - Pista\n3 - Ver possiveis soluções e Suspeitos\n0 - Sair\n");
                             System.out.println("Vidas: " + vida);
                             System.out.print("Entrada: ");
                             int opcao3 = teclado.nextInt();
 
                             if (opcao3 == 1) {
-                                teclado.nextLine();
-                                System.out.print("Moriaty e/ou Ricoletti estão morreram com o tiro? ");
-                                chute = teclado.next();
-                                int comparacao = chute.toLowerCase(Locale.ROOT).compareTo(resposta);
-                                if (comparacao == 0) {
+                                System.out.println("Selecione a resposta correta:");
+                                System.out.println("|--------------------------------------------------");
+                                for (i = 0; i < solucoes_c3.length; i++) {
+                                    System.out.printf("| %d - %s\n", (i + 1), solucoes_c3[i]);
+                                }
+                                System.out.println("|--------------------------------------------------");
+                                System.out.print("Entrada: ");
+                                int resposta = teclado.nextInt();
+                                if (resposta == 3) {
                                     System.out.println("RESPOSTA CORRETA!");
                                     break;
                                 } else {
@@ -247,8 +245,6 @@ public class main {
                                 j++;
                                 vida--;
                             } else if (opcao3 == 3) {
-                                //ARRUMAR DICAS
-                            } else if (opcao3 == 4) {
                                 System.out.println("Possiveis soluções:\n");
                                 for (String k : solucoes_c3) {
                                     System.out.println(k);
@@ -263,7 +259,7 @@ public class main {
                                 System.out.print("Obrigado por jogar!");
                                 exit = true;
                                 break;
-                            } else{
+                            } else {
                                 System.out.println("Opcao inexistente!\n");
                             }
                         }
